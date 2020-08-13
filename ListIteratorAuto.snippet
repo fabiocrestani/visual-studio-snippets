@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>List Iterator</Title>
+            <Author>Fabio Crestani</Author>
+            <Description>Iterates through a std::list</Description>
+            <Shortcut>iterator</Shortcut>
+        </Header>
+        <Snippet>
+            <Code Language="CPP">
+                <![CDATA[for (std::list<$type$>::iterator it = $list$.begin(); it != $list$.end(); ++it)
+  {
+    it->
+  }]]>
+            </Code>
+            <Declarations>
+              <Literal>
+                <ID>list</ID>
+                <ToolTip>List to iterate</ToolTip>
+                <Default>m_list</Default>
+              </Literal>
+              <Literal>
+                <ID>type</ID>
+                <ToolTip>Type of object in list</ToolTip>
+                <Default>std::string</Default>
+              </Literal>
+            </Declarations>
+        </Snippet>
+    </CodeSnippet>
+
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>List Iterator using auto</Title>
+            <Author>Fabio Crestani</Author>
+            <Description>Iterates through a std::list using auto</Description>
+            <Shortcut>autoiterator</Shortcut>
+        </Header>
+        <Snippet>
+            <Code Language="CPP">
+               <![CDATA[for(const auto& i : $list$)
+  {
+    i
+  }]]>
+            </Code>
+            <Declarations>
+              <Literal>
+                <ID>list</ID>
+                <ToolTip>List to iterate</ToolTip>
+                <Default>m_list</Default>
+              </Literal>
+            </Declarations>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
